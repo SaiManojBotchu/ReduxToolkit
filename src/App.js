@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+// https://www.youtube.com/watch?v=5yEG6GhoJBs
+import { useSelector, useDispatch } from 'react-redux';
+import { increment, decrement } from './Redux/counterSlice';
 
 function App() {
+  // 5.Subscribing to the store using a Selector
+  const count = useSelector((store) => store.counter.count);
+
+  const dispatch = useDispatch();
+
+  const handleIncrement = () => {
+    dispatch(increment()); // Dispatch an action
+  };
+
+  const handleDecrement = () => {
+    dispatch(decrement());
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Redux Toolkit Tutorial</h1>
+      <button onClick={handleDecrement}>-</button>
+      <span>{count}</span>
+      <button onClick={handleIncrement}>+</button>
     </div>
   );
 }
