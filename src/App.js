@@ -1,6 +1,6 @@
 // https://www.youtube.com/watch?v=5yEG6GhoJBs
-import {useSelector, useDispatch } from 'react-redux';
-import { increment, decrement } from './Redux/counterSlice';
+import { useSelector, useDispatch } from 'react-redux';
+import { increment, decrement } from './01_Redux/counterSlice';
 
 // {/* 5. provide store to the parent componet (index.js) */}
 
@@ -13,6 +13,7 @@ function App() {
 
   const handleIncrement = () => {
     dispatch(increment()); // Dispatch an action
+    // dispatch(increment(5)); // payload - 5
   };
 
   const handleDecrement = () => {

@@ -4,13 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import store from './Redux/store';
+// import store from './Redux/store';
+import store1 from './02_Middlewares/store1';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* 5. provide store to the parent componet (index.js) */}
-    <Provider store={store}>
+    {/* <Provider store={store}> */}
+    <Provider store={store1}>
       <App />
     </Provider>
   </React.StrictMode>
