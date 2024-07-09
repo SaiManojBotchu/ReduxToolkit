@@ -9,7 +9,7 @@ import store from './Redux/store';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* 2. provide store to the parent componet (index.js) */}
+    {/* 5. provide store to the parent componet (index.js) */}
     <Provider store={store}>
       <App />
     </Provider>
