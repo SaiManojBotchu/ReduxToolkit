@@ -1,6 +1,6 @@
 // https://www.youtube.com/watch?v=5yEG6GhoJBs
 import { useSelector, useDispatch } from 'react-redux';
-import { increment, decrement } from './01_Redux/counterSlice';
+import { increment, decrement } from './01_Redux_Basics/counterSlice';
 
 // {/* 5. provide store to the parent componet (index.js) */}
 
